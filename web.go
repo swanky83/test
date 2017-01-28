@@ -12,7 +12,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
         panic(err)
     }
     syscall.Statfs(wd, &stat)
-    fmt.Fprintf(w, "Hi there, I love it!! ")
+    fmt.Fprintf(w, "WebServer tests... ")
     fmt.Fprintf(w, "%d", stat.Bavail * uint64(stat.Bsize))
 }
 func main() {
